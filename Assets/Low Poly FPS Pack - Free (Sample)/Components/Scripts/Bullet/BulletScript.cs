@@ -58,7 +58,6 @@ public class BulletScript : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
-			
 		//If bullet collides with "ExplosiveBarrel" tag
 		if (collision.transform.tag == "ExplosiveBarrel") 
 		{
@@ -68,6 +67,18 @@ public class BulletScript : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
+
+		
+		Debug.Log(collision.transform.tag);
+		if (collision.transform.tag == "enemy") 
+		{
+			//Toggle "isHit" on target object
+			collision.transform.gameObject.GetComponent
+				<EnemyScript>().isHit = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
+
 	}
 
 	private IEnumerator DestroyTimer () 
