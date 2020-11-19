@@ -30,5 +30,5 @@ Navigation Mesh를 통해 Zombie가 플레이어를 따라오도록 설정
   
 헤드샷 구현   
 Zombie 스폰 구현(Zombie Factory, sqawn_zombie.cs)  
-수류탄 구현
-
+수류탄 구현  
+Player 체력 
