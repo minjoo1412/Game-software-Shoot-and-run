@@ -58,18 +58,7 @@ public class BulletScript : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
-		//If bullet collides with "ExplosiveBarrel" tag
-		if (collision.transform.tag == "ExplosiveBarrel") 
-		{
-			//Toggle "explode" on explosive barrel object
-			collision.transform.gameObject.GetComponent
-				<ExplosiveBarrelScript>().explode = true;
-			//Destroy bullet object
-			Destroy(gameObject);
-		}
 
-		
-		Debug.Log(collision.transform.tag);
 		if (collision.transform.tag == "enemy") 
 		{
 			//Toggle "isHit" on target object
@@ -81,18 +70,27 @@ public class BulletScript : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
-		Debug.Log(collision.transform.tag);
 		if (collision.transform.tag == "enemy_head") 
 		{
 			//Toggle "isHit" on target object
 			collision.transform.gameObject.GetComponent
-				<EnemyScript>().damage = 2;
+				<EnemyScript>().damage = 3;
 			collision.transform.gameObject.GetComponent
 				<EnemyScript>().isHit = true;
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
-
+		
+			
+		//If bullet collides with "ExplosiveBarrel" tag
+		if (collision.transform.tag == "ExplosiveBarrel") 
+		{
+			//Toggle "explode" on explosive barrel object
+			collision.transform.gameObject.GetComponent
+				<ExplosiveBarrelScript>().explode = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
 	}
 
 	private IEnumerator DestroyTimer () 

@@ -105,8 +105,8 @@ public class GrenadeScript : MonoBehaviour {
 			if (hit.GetComponent<Collider>().tag == "enemy") 
 			{
 				//Toggle "explode" on explosive barrel object
-				hit.gameObject.GetComponent<EnemyScript> ().damage = 10;
-				hit.gameObject.GetComponent<EnemyScript> ().isHit = true;
+				hit.gameObject.GetComponent<EnemyScript>().damage = 3;
+				hit.gameObject.GetComponent<EnemyScript>().isHit = true;
 			}
 		}
 
