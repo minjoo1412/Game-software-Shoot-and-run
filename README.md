@@ -24,9 +24,11 @@ Zombie에 enemy 태그(tag)를 붙임
 맵 구현 - RPG_FPS_game_assets_industrial  
 Navigation Mesh를 통해 Zombie가 플레이어를 따라오도록 설정  
 데미지를 구현하여 Zombie Hp를 설정(5)
+  
 
-
-
+2020_11_19  
+  
+헤드샷 구현
 
 
 
