@@ -72,10 +72,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
-  m_MinSize: {x: 911, y: 342}
-  m_MaxSize: {x: 22006, y: 10021}
+  m_MinSize: {x: 908, y: 342}
+  m_MaxSize: {x: 22003, y: 10021}
   vertical: 0
-  controlID: 15
+  controlID: 139
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 931
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -123,8 +123,8 @@ MonoBehaviour:
     y: 0
     width: 346
     height: 660
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -251,10 +251,10 @@ MonoBehaviour:
     y: 0
     width: 1269
     height: 931
-  m_MinSize: {x: 403, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 402, y: 342}
+  m_MaxSize: {x: 8002, y: 8042}
   vertical: 1
-  controlID: 16
+  controlID: 140
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,10 +276,10 @@ MonoBehaviour:
     y: 0
     width: 1269
     height: 660
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 17
+  controlID: 141
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -307,7 +307,7 @@ MonoBehaviour:
   - {fileID: 20}
   - {fileID: 14}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -353,9 +353,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 262
+    x: 354
     y: 81
-    width: 930
+    width: 921
     height: 639
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
@@ -458,21 +458,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Low Poly FPS Pack - Free (Sample)/Components/Scripts/Explosions_&_Impacts
+    - Assets
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Low Poly FPS Pack - Free (Sample)/Components/Scripts/Explosions_&_Impacts
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\minjo\Downloads\Game software Shoot and run
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a450000
-    m_LastClickedID: 17674
-    m_ExpandedIDs: 00000000b0440000b2440000b4440000b6440000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000ca44000014450000fe48000000ca9a3b
+    m_SelectedIDs: 08460000
+    m_LastClickedID: 17928
+    m_ExpandedIDs: 00000000f6450000f8450000fa450000fc450000fe45000000460000024600000446000006460000084600000a4600000c4600000e4600001046000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -500,7 +500,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b0440000b2440000b4440000b6440000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000ca440000
+    m_ExpandedIDs: 00000000f6450000f8450000fa450000fc450000fe45000000460000024600000446000006460000084600000a4600000c4600000e46000010460000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -531,18 +531,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300009ea40000b6a40000ce5c0000c25c0000d25c00005e3e00005c4b00006c4b0000484b00002a3e00004e4c00009297ffffd24500000e46000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scary Zombie Pack
-      m_OriginalName: Scary Zombie Pack
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17692
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_CreateAssetUtility:
@@ -555,7 +555,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 170
+  m_DirectoriesAreaWidth: 159
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6e320000
+      m_SelectedIDs: 9483ffff
       m_LastClickedID: 0
-      m_ExpandedIDs: b4aafdffc0acfdffd4b9fdff78c1fdff20e3ffff24e3ffff2ae3ffff38e3ffff3ce3ffff60fbffff58380000
+      m_ExpandedIDs: 40fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -668,9 +668,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 262
+    x: 354
     y: 81
-    width: 930
+    width: 921
     height: 639
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
