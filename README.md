@@ -26,7 +26,7 @@ Navigation Mesh를 통해 Zombie가 플레이어를 따라오도록 설정
 데미지를 구현하여 Zombie Hp를 설정(5)
   
 
-2020_11_19  
+2020_11_20  
   
 헤드샷 구현   
 Zombie 스폰 구현(Zombie Factory, sqawn_zombie.cs)
