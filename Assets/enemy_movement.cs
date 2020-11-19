@@ -9,9 +9,11 @@ public class enemy_movement : MonoBehaviour
 
     private void Awake(){
         Movement = GetComponent<movement>();
+        gunman = GameObject.Find("Gun Camera");
     }
 
     private void Update(){
+
         Movement.MoveTo(gunman.transform.position);
     }
 }

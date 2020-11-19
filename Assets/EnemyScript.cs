@@ -9,6 +9,7 @@ public class EnemyScript : MonoBehaviour {
 
 	//Used to check if the target has been hit
 	public bool isHit = false;
+	public float damage;
 
 	[Header("Customizable Options")]
 	//Minimum time before the target goes back up
@@ -28,7 +29,7 @@ public class EnemyScript : MonoBehaviour {
 		//If the target is hit
 		if (isHit == true) 
 		{
-			hp--;
+			hp = hp - damage;
 			isHit = false;
 		}
 		Debug.Log(hp);

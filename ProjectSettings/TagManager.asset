@@ -8,6 +8,7 @@ TagManager:
   - Metal
   - Target
   - enemy
+  - enemy_head
   layers:
   - Default
   - TransparentFX

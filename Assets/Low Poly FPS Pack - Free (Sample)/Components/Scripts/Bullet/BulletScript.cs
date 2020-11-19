@@ -74,6 +74,20 @@ public class BulletScript : MonoBehaviour {
 		{
 			//Toggle "isHit" on target object
 			collision.transform.gameObject.GetComponent
+				<EnemyScript>().damage = 1;
+			collision.transform.gameObject.GetComponent
+				<EnemyScript>().isHit = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
+
+		Debug.Log(collision.transform.tag);
+		if (collision.transform.tag == "enemy_head") 
+		{
+			//Toggle "isHit" on target object
+			collision.transform.gameObject.GetComponent
+				<EnemyScript>().damage = 2;
+			collision.transform.gameObject.GetComponent
 				<EnemyScript>().isHit = true;
 			//Destroy bullet object
 			Destroy(gameObject);
