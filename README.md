@@ -19,10 +19,10 @@ Scary Zombie Pack : Mixamo(캐릭터 및 애니메이션) - Combat Zombie 캐릭
 
 2020_11_19
 
-Zombie 구현 - Scary Zombie Pack
-Zombie에 enemy 태그(tag)를 붙임
-맵 구현 - RPG_FPS_game_assets_industrial
-Navigation Mesh를 통해 Zombie가 플레이어를 따라오도록 설정
+Zombie 구현 - Scary Zombie Pack  
+Zombie에 enemy 태그(tag)를 붙임  
+맵 구현 - RPG_FPS_game_assets_industrial  
+Navigation Mesh를 통해 Zombie가 플레이어를 따라오도록 설정  
 데미지를 구현하여 Zombie Hp를 설정(5)
 
 
