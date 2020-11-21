@@ -30,5 +30,14 @@ Navigation Mesh를 통해 Zombie가 플레이어를 따라오도록 설정
   
 헤드샷 구현   
 Zombie 스폰 구현(Zombie Factory, sqawn_zombie.cs)  
+
+2020_11_21  
+
 수류탄 구현  
 Player 체력 
+
+2020_11_22  
+  
+레벨업 + 경험치  
+레벨에 따른 데미지 변경  
+쓰러진 zombie에게 데미지 입는 오류 해결
