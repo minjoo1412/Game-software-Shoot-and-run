@@ -12,6 +12,7 @@ TagManager:
   - dead_zombie
   - heal_on
   - heal_off
+  - enemy_leg
   layers:
   - Default
   - TransparentFX

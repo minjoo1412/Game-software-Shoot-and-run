@@ -14,21 +14,31 @@ public class EnemyScript : MonoBehaviour {
 	public Animator animator;
 	PlayerScript playerScript;
 	private float count = 1;
+	public bool isleg = false;
+	private float leg_hit = 0;
 
 	private void Update () {
 
 		//If the target is hit
 		if (isHit == true) 
 		{
-			PlayerScript.exp++;
 			hp = hp - damage;
 			isHit = false;
+			if(isleg == true){
+				leg_hit++;
+				isleg = false;
+			}
 		}
 
+		if(leg_hit >= 2){
+			animator.Play("zombie_crawl");
+		}
+
+
 		if(hp < 0  && count == 1){
+			PlayerScript.exp++;
 			animator.Play("zombie_die");
 			gameObject.tag = "dead_zombie";
-			Debug.Log(gameObject.tag);
 			Destroy(enemy, 3.0f);
 			count --;
 		}

@@ -80,6 +80,18 @@ public class BulletScript : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
+		if (collision.transform.tag == "enemy_leg") 
+		{
+			//Toggle "isHit" on target object
+			collision.transform.gameObject.GetComponent
+				<EnemyScript>().damage = 1* (1+ 0.1f * (PlayerScript.level-1));
+			collision.transform.gameObject.GetComponent
+				<EnemyScript>().isHit = true;
+				collision.transform.gameObject.GetComponent
+				<EnemyScript>().isleg = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
 		
 			
 		//If bullet collides with "ExplosiveBarrel" tag

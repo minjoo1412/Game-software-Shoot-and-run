@@ -24,7 +24,6 @@ public class sqawn_healpack : MonoBehaviour
             gameObject.tag = "heal_on";
             Debug.Log(gameObject.tag);
         }
-        Debug.Log("spawn" + gameObject.tag);
     }
 }
 

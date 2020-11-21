@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2519486770720320518, guid: 1c7db970c5172af42bd726f4e2647963, type: 3}
       propertyPath: m_Name
-      value: heal_point Variant
+      value: heal_point
       objectReference: {fileID: 0}
     - target: {fileID: 2519486770720320518, guid: 1c7db970c5172af42bd726f4e2647963, type: 3}
       propertyPath: m_TagString
@@ -17,15 +17,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2519486770720320520, guid: 1c7db970c5172af42bd726f4e2647963, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.444218
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 2519486770720320520, guid: 1c7db970c5172af42bd726f4e2647963, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6186752
+      value: 4.72
       objectReference: {fileID: 0}
     - target: {fileID: 2519486770720320520, guid: 1c7db970c5172af42bd726f4e2647963, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.50471
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519486770720320520, guid: 1c7db970c5172af42bd726f4e2647963, type: 3}
       propertyPath: m_LocalRotation.x

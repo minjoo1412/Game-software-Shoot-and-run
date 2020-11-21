@@ -115,6 +115,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 
 	[Header("UI Components")]
 	public Text timescaleText;
+	public Text timescaleInstructionsText;
 	public Text currentWeaponText;
 	public Text currentAmmoText;
 	public Text totalAmmoText;
@@ -207,6 +208,12 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	
 	private void Update () {
 		timescaleText.text = PlayerScript.player_hp.ToString();
+		
+		timescaleInstructionsText.text = PlayerScript.level.ToString();
+
+		if(PlayerScript.player_hp <= 0){
+			Time.timeScale = 0.0f;
+		}
 		//Aiming
 		//Toggle camera FOV when right click is held down
 		if(Input.GetButton("Fire2") && !isReloading && !isRunning && !isInspecting) 
