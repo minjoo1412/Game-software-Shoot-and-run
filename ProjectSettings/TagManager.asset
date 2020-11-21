@@ -9,6 +9,7 @@ TagManager:
   - Target
   - enemy
   - enemy_head
+  - dead_zombie
   layers:
   - Default
   - TransparentFX

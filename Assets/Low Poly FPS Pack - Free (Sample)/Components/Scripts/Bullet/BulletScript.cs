@@ -63,7 +63,7 @@ public class BulletScript : MonoBehaviour {
 		{
 			//Toggle "isHit" on target object
 			collision.transform.gameObject.GetComponent
-				<EnemyScript>().damage = 1;
+				<EnemyScript>().damage = 1 * (1+ 0.1f * (PlayerScript.level-1));
 			collision.transform.gameObject.GetComponent
 				<EnemyScript>().isHit = true;
 			//Destroy bullet object
@@ -74,7 +74,7 @@ public class BulletScript : MonoBehaviour {
 		{
 			//Toggle "isHit" on target object
 			collision.transform.gameObject.GetComponent
-				<EnemyScript>().damage = 3;
+				<EnemyScript>().damage = 3* (1+ 0.1f * (PlayerScript.level-1));
 			collision.transform.gameObject.GetComponent
 				<EnemyScript>().isHit = true;
 			//Destroy bullet object

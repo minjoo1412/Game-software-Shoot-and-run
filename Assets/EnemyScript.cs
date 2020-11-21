@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour {
 	public float hp = 5;
     public GameObject enemy;
 	public Animator animator;
+	PlayerScript playerScript;
 	private float count = 1;
 
 	private void Update () {
@@ -19,12 +20,15 @@ public class EnemyScript : MonoBehaviour {
 		//If the target is hit
 		if (isHit == true) 
 		{
+			PlayerScript.exp++;
 			hp = hp - damage;
 			isHit = false;
 		}
 
 		if(hp < 0  && count == 1){
 			animator.Play("zombie_die");
+			gameObject.tag = "dead_zombie";
+			Debug.Log(gameObject.tag);
 			Destroy(enemy, 3.0f);
 			count --;
 		}
