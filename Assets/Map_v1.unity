@@ -25809,6 +25809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch15_nonPBR
       objectReference: {fileID: 0}
+    - target: {fileID: 8407553787733458887, guid: 9876ef600b473f54bb96c3a4a6654772, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8878417994151129638, guid: 9876ef600b473f54bb96c3a4a6654772, type: 3}
       propertyPath: m_LocalPosition.x
       value: 61.717587
