@@ -10,29 +10,31 @@ public class PlayerScript : MonoBehaviour {
 
 	public static float exp = 0;
 	public static float level = 1;
-
-	private float hp = 100;
+	public static float max_player_hp;
+	public static float player_hp = 100;
 	public GameObject player;
+
+	private void Awake(){
+		max_player_hp = 100;
+	}
 	private void Update () {
 
 		//If the target is hit
 		if (isHit == true) 
 		{
-			hp = hp - Dam;
+			player_hp = player_hp - Dam;
 			isHit = false;
 		}
-		Debug.Log(hp);
-		if(hp <= 0){
+		if(player_hp <= 0){
 			Destroy(player);
 		}
-
+		
 		level_up();
 		
 	}
 
 	private void OnCollisionEnter(Collision collision){
 		if(collision.collider.tag == "enemy"){
-			Debug.Log("아파");
 			Dam = 5;
 			isHit = true;
 		}
@@ -43,6 +45,8 @@ public class PlayerScript : MonoBehaviour {
 			level++;
 			exp = exp - 10;
 			Debug.Log("level : " + level);
+			max_player_hp = 100 + 10*(level - 1);
+			player_hp = max_player_hp;
 		}
 	}
 

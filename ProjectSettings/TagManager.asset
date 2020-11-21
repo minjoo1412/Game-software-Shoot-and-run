@@ -10,6 +10,8 @@ TagManager:
   - enemy
   - enemy_head
   - dead_zombie
+  - heal_on
+  - heal_off
   layers:
   - Default
   - TransparentFX
