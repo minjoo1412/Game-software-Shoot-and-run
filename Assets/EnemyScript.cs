@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour {
 	public float hp = 5;
     public GameObject enemy;
 	public Animator animator;
+	public Animation animation;
 	PlayerScript playerScript;
 	private float count = 1;
 	public bool isleg = false;
@@ -34,10 +35,10 @@ public class EnemyScript : MonoBehaviour {
 			animator.Play("zombie_crawl");
 		}
 
-
+		
 		if(hp < 0  && count == 1){
 			PlayerScript.exp++;
-			animator.Play("zombie_die");
+			animator.SetTrigger("dying");
 			gameObject.tag = "dead_zombie";
 			Destroy(enemy, 3.0f);
 			count --;
