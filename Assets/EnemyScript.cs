@@ -39,6 +39,8 @@ public class EnemyScript : MonoBehaviour {
 		
 		if(hp < 0  && count == 1){
 			PlayerScript.exp++;
+			FPSControllerLPFP.FpsControllerLPFP.kill++;
+			FPSControllerLPFP.FpsControllerLPFP.skill++;
 			animator.SetTrigger("dying");
 			gameObject.tag = "dead_zombie";
 			Destroy(enemy, 3.0f);

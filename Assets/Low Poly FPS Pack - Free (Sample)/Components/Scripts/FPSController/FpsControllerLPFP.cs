@@ -10,6 +10,7 @@ namespace FPSControllerLPFP
     [RequireComponent(typeof(AudioSource))]
     public class FpsControllerLPFP : MonoBehaviour
     {
+
 #pragma warning disable 649
 		[Header("Arms")]
         [Tooltip("The transform component that holds the gun camera."), SerializeField]
@@ -65,6 +66,12 @@ namespace FPSControllerLPFP
         private SmoothVelocity _velocityX;
         private SmoothVelocity _velocityZ;
         private bool _isGrounded;
+        public static float kill = 0;
+	    public static float skill = 0;
+	    public static bool skill_able = false;
+	    public static bool skill_start = false;
+        public static float skill_time = 10f;
+        public static float current_skill_time = 0f;
 
         private readonly RaycastHit[] _groundCastResults = new RaycastHit[8];
         private readonly RaycastHit[] _wallCastResults = new RaycastHit[8];
@@ -147,6 +154,25 @@ namespace FPSControllerLPFP
 			arms.position = transform.position + transform.TransformVector(armPosition);
             Jump();
             PlayFootstepSounds();
+            if(skill >= 10 && skill_able){
+                current_skill_time = 0f;
+                walkingSpeed = 10f;
+                runningSpeed = 15f;
+                PlayerScript.Dam = 1;
+                
+                skill = 0;
+                skill_able = false;
+                skill_start = true;
+            }
+            if(skill_start){
+                current_skill_time += Time.deltaTime;
+                if(skill_time <= current_skill_time){
+                    skill_start = false;
+                    walkingSpeed = 5f;
+                    runningSpeed = 9f;
+                    PlayerScript.Dam = 5;
+                }
+            }
         }
 
         private void RotateCameraAndCharacter()

@@ -6,8 +6,7 @@ public class PlayerScript : MonoBehaviour {
 
 	//Used to check if the target has been hit
 	public bool isHit = false;
-	public float Dam;
-
+	public static float Dam = 5;
 	public static float exp = 0;
 	public static float level = 1;
 	public static float max_player_hp;
@@ -31,14 +30,16 @@ public class PlayerScript : MonoBehaviour {
 		
 		level_up();
 		
+
 	}
 
 	private void OnCollisionEnter(Collision collision){
 		if(collision.collider.tag == "enemy"){
-			Dam = 5;
 			isHit = true;
 		}
 	}
+
+
 
 	private void level_up(){
 		if(exp >= 10){

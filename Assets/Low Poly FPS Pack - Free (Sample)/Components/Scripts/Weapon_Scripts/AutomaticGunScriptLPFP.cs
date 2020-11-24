@@ -66,7 +66,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	private bool isInspecting;
 
 	//How much ammo is currently left
-	private int currentAmmo;
+	public int currentAmmo;
 	//Totalt amount of ammo
 	[Tooltip("How much ammo the weapon should have.")]
 	public int ammo;
@@ -116,7 +116,8 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	[Header("UI Components")]
 	public Text timescaleText;
 	public Text timescaleInstructionsText;
-	public Text currentWeaponText;
+	public Text kill;
+	public Text kill_num;
 	public Text currentAmmoText;
 	public Text totalAmmoText;
 
@@ -174,7 +175,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		//Save the weapon name
 		storedWeaponName = weaponName;
 		//Get weapon name from string to text
-		currentWeaponText.text = weaponName;
 		//Set total ammo text from total ammo int
 		totalAmmoText.text = ammo.ToString();
 
@@ -208,6 +208,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	
 	private void Update () {
 		timescaleText.text = PlayerScript.player_hp.ToString();
+		kill_num.text = FPSControllerLPFP.FpsControllerLPFP.kill.ToString();
 		
 		timescaleInstructionsText.text = PlayerScript.level.ToString();
 
@@ -297,7 +298,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		//Play knife attack 1 animation when Q key is pressed
 		if (Input.GetKeyDown (KeyCode.Q) && !isInspecting) 
 		{
-			anim.Play ("Knife Attack 1", 0, 0f);
+			FPSControllerLPFP.FpsControllerLPFP.skill_able = true;
 		}
 		//Play knife attack 2 animation when F key is pressed
 		if (Input.GetKeyDown (KeyCode.F) && !isInspecting) 
@@ -317,7 +318,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		if (currentAmmo == 0) 
 		{
 			//Show out of ammo text
-			currentWeaponText.text = "OUT OF AMMO";
 			//Toggle bool
 			outOfAmmo = true;
 			//Auto reload if true
@@ -329,7 +329,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		else 
 		{
 			//When ammo is full, show weapon name again
-			currentWeaponText.text = storedWeaponName.ToString ();
 			//Toggle bool
 			outOfAmmo = false;
 			//anim.SetBool ("Out Of Ammo", false);
@@ -437,7 +436,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.E) && !hasBeenHolstered) 
 		{
 			holstered = true;
-
+			
 			mainAudioSource.clip = SoundClips.holsterSound;
 			mainAudioSource.Play();
 
@@ -479,7 +478,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		} else {
 			anim.SetBool ("Walk", false);
 		}
-
+		
 		//Running when pressing down W and Left Shift key
 		if ((Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.LeftShift))) 
 		{
