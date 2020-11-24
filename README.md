@@ -44,3 +44,9 @@ Player 체력
 HP UI구현  
 LV UI구현  
 힐팩 구현
+
+2020_11_23  
+zombie애니메이션 Humanoid화
+
+2020_11_24  
+zombie애니메이션 자연스럽게 
