@@ -606,6 +606,7 @@ MonoBehaviour:
   hp: 5
   enemy: {fileID: 7308076677451976538}
   animator: {fileID: 0}
+  animation: {fileID: 0}
   isleg: 0
 --- !u!1 &1615841252097900176
 GameObject:
@@ -721,6 +722,7 @@ MonoBehaviour:
   hp: 5
   enemy: {fileID: 7308076677451976538}
   animator: {fileID: 473034237197118157}
+  animation: {fileID: 0}
   isleg: 0
 --- !u!1 &1615841252251324464
 GameObject:
@@ -836,6 +838,7 @@ MonoBehaviour:
   hp: 5
   enemy: {fileID: 7308076677451976538}
   animator: {fileID: 473034237197118157}
+  animation: {fileID: 0}
   isleg: 0
 --- !u!1 &1615841252483171861
 GameObject:
@@ -951,6 +954,7 @@ MonoBehaviour:
   hp: 5
   enemy: {fileID: 7308076677451976538}
   animator: {fileID: 473034237197118157}
+  animation: {fileID: 0}
   isleg: 0
 --- !u!1 &1682908263223538103
 GameObject:
@@ -2300,7 +2304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e919609983052419add10915fce20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 0.1
+  animespeed: 1
 --- !u!114 &7042374277795944462
 MonoBehaviour:
   m_ObjectHideFlags: 0

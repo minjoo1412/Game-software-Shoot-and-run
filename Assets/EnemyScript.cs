@@ -15,11 +15,11 @@ public class EnemyScript : MonoBehaviour {
 	public Animation animation;
 	PlayerScript playerScript;
 	private float count = 1;
+	private float leg_count = 1;
 	public bool isleg = false;
 	private float leg_hit = 0;
 
 	private void Update () {
-
 		//If the target is hit
 		if (isHit == true) 
 		{
@@ -31,8 +31,9 @@ public class EnemyScript : MonoBehaviour {
 			}
 		}
 
-		if(leg_hit >= 2){
+		if(leg_hit >= 2 && leg_count == 1){
 			animator.Play("zombie_crawl");
+			leg_count--;
 		}
 
 		

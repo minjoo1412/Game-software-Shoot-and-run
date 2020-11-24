@@ -7,6 +7,7 @@ public class movement : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed = 5.0f;
+    public float animespeed = 1f;
     private NavMeshAgent navMeshAgent;
 
     private void Awake(){
