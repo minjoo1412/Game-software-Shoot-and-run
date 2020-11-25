@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Map_v1.unity
+- path: "Assets/\uC0C8 \uD3F4\uB354 (3)/Title.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0
