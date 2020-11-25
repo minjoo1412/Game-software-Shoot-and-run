@@ -12,7 +12,7 @@ public class EnemyScript : MonoBehaviour {
 	public float hp = 5;
     public GameObject enemy;
 	public Animator animator;
-	public Animation animation;
+	public Animation animation;	
 	PlayerScript playerScript;
 	private float count = 1;
 	private float leg_count = 1;
@@ -31,20 +31,20 @@ public class EnemyScript : MonoBehaviour {
 			}
 		}
 
-		if(leg_hit >= 2 && leg_count == 1){
+		if(leg_hit >= 2 && leg_count == 1 && animator.GetCurrentAnimatorStateInfo(0).nameHash != Animator.StringToHash("Base Layer.zombie_die")){
 			animator.Play("zombie_crawl");
 			leg_count--;
 		}
 
 		
 		if(hp < 0  && count == 1){
+			count --;
 			PlayerScript.exp++;
 			FPSControllerLPFP.FpsControllerLPFP.kill++;
 			FPSControllerLPFP.FpsControllerLPFP.skill++;
 			animator.SetTrigger("dying");
 			gameObject.tag = "dead_zombie";
 			Destroy(enemy, 3.0f);
-			count --;
 		}
 
 	}

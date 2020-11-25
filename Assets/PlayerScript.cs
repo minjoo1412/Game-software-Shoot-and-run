@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 // ----- Low Poly FPS Pack Free Version -----
@@ -12,6 +13,7 @@ public class PlayerScript : MonoBehaviour {
 	public static float max_player_hp;
 	public static float player_hp = 100;
 	public GameObject player;
+	public Image blood;
 
 	private void Awake(){
 		max_player_hp = 100;
@@ -23,6 +25,7 @@ public class PlayerScript : MonoBehaviour {
 		{
 			player_hp = player_hp - Dam;
 			isHit = false;
+			StartCoroutine(showblood());
 		}
 		if(player_hp <= 0){
 			Destroy(player);
@@ -51,6 +54,12 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
+	IEnumerator showblood(){
+		blood.color = new Color(1,0,0,UnityEngine.Random.Range(0.5f,0.6f));
+		yield return new WaitForSeconds(0.3f);
+		blood.color = Color.clear;
+	}
+	
 	//Time before the target pops back up
 }
 // ----- Low Poly FPS Pack Free Version -----

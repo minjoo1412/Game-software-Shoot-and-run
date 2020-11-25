@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
 
 namespace FPSControllerLPFP
 {
@@ -72,6 +74,7 @@ namespace FPSControllerLPFP
 	    public static bool skill_start = false;
         public static float skill_time = 10f;
         public static float current_skill_time = 0f;
+        public Image skill_sceen;
 
         private readonly RaycastHit[] _groundCastResults = new RaycastHit[8];
         private readonly RaycastHit[] _wallCastResults = new RaycastHit[8];
@@ -160,6 +163,7 @@ namespace FPSControllerLPFP
                 runningSpeed = 15f;
                 PlayerScript.Dam = 1;
                 
+			    StartCoroutine(showskill());
                 skill = 0;
                 skill_able = false;
                 skill_start = true;
@@ -229,6 +233,11 @@ namespace FPSControllerLPFP
             return angleDegrees;
         }
 
+        IEnumerator showskill(){
+            skill_sceen.color = new Color(1,1,0,UnityEngine.Random.Range(0.5f,0.6f));
+            yield return new WaitForSeconds(10f);
+            skill_sceen.color = Color.clear;
+	    }
         private void MoveCharacter()
         {
             var direction = new Vector3(input.Move, 0f, input.Strafe).normalized;
