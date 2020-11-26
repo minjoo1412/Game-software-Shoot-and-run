@@ -35,7 +35,7 @@ public class EnemyScript : MonoBehaviour {
 		}
 
 		if(leg_hit >= 2 && leg_count == 1 && animator.GetCurrentAnimatorStateInfo(0).nameHash != Animator.StringToHash("Base Layer.zombie_die")){
-			animator.Play("zombie_crawl");
+			animator.SetTrigger("crawl");
 			leg_count--;
 		}
 
