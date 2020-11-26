@@ -70,6 +70,17 @@ public class BulletScript : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
+		if (collision.transform.tag == "enemy2") 
+		{
+			//Toggle "isHit" on target object
+			collision.transform.gameObject.GetComponent
+				<MutantScript>().damage = 1 * (1+ 0.1f * (PlayerScript.level-1));
+			collision.transform.gameObject.GetComponent
+				<MutantScript>().isHit = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
+
 		if (collision.transform.tag == "enemy_head") 
 		{
 			//Toggle "isHit" on target object
@@ -77,6 +88,16 @@ public class BulletScript : MonoBehaviour {
 				<EnemyScript>().damage = 3* (1+ 0.1f * (PlayerScript.level-1));
 			collision.transform.gameObject.GetComponent
 				<EnemyScript>().isHit = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
+		if (collision.transform.tag == "enemy_head2") 
+		{
+			//Toggle "isHit" on target object
+			collision.transform.gameObject.GetComponent
+				<MutantScript>().damage = 3* (1+ 0.1f * (PlayerScript.level-1));
+			collision.transform.gameObject.GetComponent
+				<MutantScript>().isHit = true;
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
@@ -89,6 +110,18 @@ public class BulletScript : MonoBehaviour {
 				<EnemyScript>().isHit = true;
 				collision.transform.gameObject.GetComponent
 				<EnemyScript>().isleg = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
+		if (collision.transform.tag == "enemy_leg2") 
+		{
+			//Toggle "isHit" on target object
+			collision.transform.gameObject.GetComponent
+				<MutantScript>().damage = 1* (1+ 0.1f * (PlayerScript.level-1));
+			collision.transform.gameObject.GetComponent
+				<MutantScript>().isHit = true;
+				collision.transform.gameObject.GetComponent
+				<MutantScript>().isleg = true;
 			//Destroy bullet object
 			Destroy(gameObject);
 		}

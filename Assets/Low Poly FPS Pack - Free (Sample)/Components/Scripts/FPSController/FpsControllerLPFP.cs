@@ -234,7 +234,7 @@ namespace FPSControllerLPFP
         }
 
         IEnumerator showskill(){
-            skill_sceen.color = new Color(1,1,0,UnityEngine.Random.Range(0.5f,0.6f));
+            skill_sceen.color = new Color(1,1,0,UnityEngine.Random.Range(0.2f,0.3f));
             yield return new WaitForSeconds(10f);
             skill_sceen.color = Color.clear;
 	    }

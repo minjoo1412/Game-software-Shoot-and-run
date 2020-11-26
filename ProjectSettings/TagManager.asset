@@ -13,6 +13,12 @@ TagManager:
   - heal_on
   - heal_off
   - enemy_leg
+  - enemy_head2
+  - enemy_leg2
+  - enemy2
+  - attack_now
+  - attack_now1
+  - attack_now2
   layers:
   - Default
   - TransparentFX
