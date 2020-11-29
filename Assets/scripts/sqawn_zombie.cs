@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//김민주
+//zombie소환 Factory
 public class sqawn_zombie : MonoBehaviour
 {
     float minTime = 1;

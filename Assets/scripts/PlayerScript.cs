@@ -4,10 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-// ----- Low Poly FPS Pack Free Version -----
+//김민주
+//플레이어의 체력, level, 피격 UI를 맡는다.
+//플레이어 사망시 gameover씬으로 넘어간다.
+
 public class PlayerScript : MonoBehaviour {
 
-	//Used to check if the target has been hit
+	// 플레이어가 맞았을 때 체크
 	public bool isHit = false;
 	public static float Dam = 5;
 	public static float exp = 0;
@@ -23,7 +26,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 	private void Update () {
 
-		//If the target is hit
+		// if 타겟이 맞으면
 		if (isHit == true) 
 		{
 			player_hp = player_hp - Dam;
@@ -80,4 +83,3 @@ public class PlayerScript : MonoBehaviour {
 	
 	//Time before the target pops back up
 }
-// ----- Low Poly FPS Pack Free Version -----

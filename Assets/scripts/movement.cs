@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//김민주
+//enemy(ch15)와 boss(ch35)의 이통을 맡는다. 설정된 목적지로 이동한다.
 public class movement : MonoBehaviour
 {
     [SerializeField]

@@ -2,7 +2,8 @@
 using UnityEngine.AI;
 using System.Collections;
 
-// ----- Low Poly FPS Pack Free Version -----
+//김민주
+// Enemy(ch15)의 체력, 특정행위, 애니메이션, 소멸을 맡는다.
 public class EnemyScript : MonoBehaviour {
 
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//김민주
+//boss소환 Factory
 public class sqawn_boss : MonoBehaviour
 {
     float minTime = 1;

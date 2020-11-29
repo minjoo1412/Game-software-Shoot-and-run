@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//김민주
+//healpack소환 Factory
 public class sqawn_healpack : MonoBehaviour
 {
     float currentTime;

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//김민주
+//플레이어의 회복을 도와주는 힐팩
 public class healpack : MonoBehaviour
 {
 
